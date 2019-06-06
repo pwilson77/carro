@@ -1,0 +1,144 @@
+$special-purple: #ea515c;
+
+.navbar {
+  margin-top: 0px !important;
+}
+
+#flex-center {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#flex-center2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 300px;
+  width: 300px;
+}
+
+.hero-image {
+  height: 500px;
+  background-image: url("assets/Images/images-woman1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#hero-image-text {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-left: 150px;
+
+  h1 {
+    font-size: -webkit-xxx-large;
+  }
+
+  p {
+    font-size: x-large;
+    font-family: "Raleway", sans-serif;
+  }
+
+  i {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.purple-text-button {
+  height: 43px;
+  color: $special-purple;
+  background-color: white;
+  width: 180px;
+  border-radius: 25px;
+  border: none;
+  &:hover {
+    height: 43px;
+    color: white;
+    background-color: $special-purple;
+    width: 180px;
+    border-radius: 25px;
+    border: none;
+    transition-duration: 1s;
+  }
+}
+
+.purple-button {
+  height: 43px;
+  color: white;
+  background-color: $special-purple;
+  width: 180px;
+  border-radius: 25px;
+  border: none;
+  &:hover {
+    height: 43px;
+    color: $special-purple;
+    background-color: white;
+    width: 180px;
+    border-radius: 25px;
+    border: 1px solid;
+    transition-duration: 1s;
+  }
+}
+
+.list-i {
+  padding: 0px 8px 16px 8px;
+}
+
+#promo-image2 {
+  height: 400px;
+  object-fit: cover;
+}
+
+.promo-box1 {
+  height: 200px;
+  align-content: center;
+  flex-wrap: wrap;
+  h1,
+  p {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.input-box {
+  input {
+    border-radius: 24px !important;
+    height: 43px !important;
+    width: 400px;
+    margin-right: 20px !important;
+  }
+  button {
+    width: 120px;
+    &:hover {
+      width: 120px;
+    }
+  }
+}
+
+#promo-box2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  h1 {
+    flex-basis: 100%;
+  }
+  .text-box {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 20px 0px;
+  }
+  p {
+    width: 600px;
+  }
+}
+
+footer {
+  padding: 20px 0px;
+}
