@@ -86,6 +86,24 @@ $special-purple: #ea515c;
   }
 }
 
+.purple-button2 {
+  height: 40px;
+  color: white;
+  background-color: $special-purple;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    height: 40px;
+    color: $special-purple;
+    background-color: white;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition-duration: 1s;
+  }
+}
+
 .list-i {
   padding: 0px 8px 16px 8px;
 }
@@ -141,4 +159,70 @@ $special-purple: #ea515c;
 
 footer {
   padding: 20px 0px;
+}
+
+//categories page
+.hero-image2 {
+  background-image: url(assets/Images/Images-modal4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 400px;
+  .hero-image2-content {
+    height: 300px;
+    display: flex;
+    align-content: center;
+    color: white;
+  }
+}
+
+#shop-image {
+  .image {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 200px;
+    }
+  }
+  .space-a {
+    padding: 40px;
+  }
+}
+
+.purple-text {
+  color: $special-purple;
+}
+
+#promo-image3 {
+  background-image: url("assets/Images/images-shoe2.png");
+  height: 350px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .promo-image3-content {
+    height: 200px;
+    color: white;
+    width: 40%;
+    padding-left: 20px;
+    font-size: large;
+    p {
+      font-size: large;
+    }
+  }
+}
+
+.subscribe-box {
+  display: flex !important;
+  justify-content: center !important;
+  .subscribe-text {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+  }
+}
+
+#socialicons {
+  padding-top: 20px;
 }

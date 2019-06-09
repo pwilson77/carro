@@ -101,6 +101,26 @@
           transition-duration: 1s;
 }
 
+.purple-button2 {
+  height: 40px;
+  color: white;
+  background-color: #ea515c;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+}
+
+.purple-button2:hover {
+  height: 40px;
+  color: #ea515c;
+  background-color: white;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
 .list-i {
   padding: 0px 8px 16px 8px;
 }
@@ -175,5 +195,93 @@
 
 footer {
   padding: 20px 0px;
+}
+
+.hero-image2 {
+  background-image: url(assets/Images/Images-modal4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 400px;
+}
+
+.hero-image2 .hero-image2-content {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+}
+
+#shop-image .image {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#shop-image .image img {
+  width: 200px;
+}
+
+#shop-image .space-a {
+  padding: 40px;
+}
+
+.purple-text {
+  color: #ea515c;
+}
+
+#promo-image3 {
+  background-image: url("assets/Images/images-shoe2.png");
+  height: 350px;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#promo-image3 .promo-image3-content {
+  height: 200px;
+  color: white;
+  width: 40%;
+  padding-left: 20px;
+  font-size: large;
+}
+
+#promo-image3 .promo-image3-content p {
+  font-size: large;
+}
+
+.subscribe-box {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.subscribe-box .subscribe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 60px;
+}
+
+#socialicons {
+  padding-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */
