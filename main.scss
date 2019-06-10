@@ -1,4 +1,5 @@
 $special-purple: #ea515c;
+$special-gray: #858788;
 
 .navbar {
   margin-top: 0px !important;
@@ -14,6 +15,10 @@ $special-purple: #ea515c;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.block {
+  display: block !important;
 }
 
 .square {
@@ -225,4 +230,33 @@ footer {
 
 #socialicons {
   padding-top: 20px;
+}
+
+.pricetext {
+  color: $special-purple;
+  font-size: x-large;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.greycolor {
+  color: $special-gray !important;
+}
+
+.header-rating {
+  padding: 20px 0px;
+  .header {
+    margin-top: 2px !important;
+  }
+}
+
+.sizeblock,
+.quantityblock {
+  display: block;
+  padding: 20px 0px;
+}
+
+.product-area {
+  background-color: white;
+  padding: 20px 0px;
 }

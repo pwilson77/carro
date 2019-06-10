@@ -23,6 +23,10 @@
       flex-wrap: wrap;
 }
 
+.block {
+  display: block !important;
+}
+
 .square {
   height: 300px;
   width: 300px;
@@ -283,5 +287,35 @@ footer {
 
 #socialicons {
   padding-top: 20px;
+}
+
+.pricetext {
+  color: #ea515c;
+  font-size: x-large;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.greycolor {
+  color: #858788 !important;
+}
+
+.header-rating {
+  padding: 20px 0px;
+}
+
+.header-rating .header {
+  margin-top: 2px !important;
+}
+
+.sizeblock,
+.quantityblock {
+  display: block;
+  padding: 20px 0px;
+}
+
+.product-area {
+  background-color: white;
+  padding: 20px 0px;
 }
 /*# sourceMappingURL=main.css.map */
