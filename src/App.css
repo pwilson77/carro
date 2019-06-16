@@ -1,33 +1,332 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Raleway:300i,400&display=swap");
+.navbar {
+  margin-top: 0px !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#flex-center2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.block {
+  display: block !important;
+}
+
+.square img {
+  height: 300px !important;
+  width: 300px;
+}
+
+.hero-image {
+  height: 500px;
+  background-image: url("/Images/images-woman1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#hero-image-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 150px;
+  width: 45%;
+  height: -webkit-fill-available;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#hero-image-text h1 {
+  font-size: -webkit-xxx-large;
 }
+
+#hero-image-text p {
+  font-size: x-large;
+  font-family: "Raleway", sans-serif;
+}
+
+#hero-image-text i {
+  font-family: "Raleway", sans-serif;
+}
+
+.purple-text-button {
+  height: 43px;
+  color: #ea515c;
+  background-color: white;
+  width: 180px;
+  border-radius: 25px;
+  border: none;
+}
+
+.purple-text-button:hover {
+  height: 43px;
+  color: white;
+  background-color: #ea515c;
+  width: 180px;
+  border-radius: 25px;
+  border: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.purple-button {
+  height: 43px;
+  color: white;
+  background-color: #ea515c;
+  width: 180px;
+  border-radius: 25px;
+  border: none;
+}
+
+.purple-button:hover {
+  height: 43px;
+  color: #ea515c;
+  background-color: white;
+  width: 180px;
+  border-radius: 25px;
+  border: 1px solid;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.purple-button2 {
+  height: 40px;
+  color: white;
+  background-color: #ea515c;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+}
+
+.purple-button2:hover {
+  height: 40px;
+  color: #ea515c;
+  background-color: white;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.list-i {
+  padding: 0px 8px 16px 8px;
+}
+
+#promo-image2 img {
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.promo-box1 {
+  height: 200px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.promo-box1 h1,
+.promo-box1 p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.input-box input {
+  border-radius: 24px !important;
+  height: 43px !important;
+  width: 400px;
+  margin-right: 20px !important;
+}
+
+.input-box button {
+  width: 120px;
+}
+
+.input-box button:hover {
+  width: 120px;
+}
+
+#promo-box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#promo-box2 h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+#promo-box2 .text-box {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 0px 20px 0px;
+}
+
+#promo-box2 p {
+  width: 600px;
+}
+
+footer {
+  padding: 20px 0px;
+}
+
+.hero-image2 {
+  background-image: url("/Images/Images-modal4.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 400px;
+}
+
+.hero-image2 .hero-image2-content {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+}
+
+#shop-image .image {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#shop-image .image img {
+  width: 200px;
+}
+
+#shop-image .space-a {
+  padding: 40px;
+}
+
+.purple-text {
+  color: #ea515c !important;
+}
+
+#promo-image3 {
+  background-image: url("/Images/images-shoe2.png");
+  height: 350px;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#promo-image3 .promo-image3-content {
+  height: 200px;
+  color: white;
+  width: 40%;
+  padding-left: 20px;
+  font-size: large;
+}
+
+#promo-image3 .promo-image3-content p {
+  font-size: large;
+}
+
+.subscribe-box {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.subscribe-box .subscribe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 60px;
+}
+
+#socialicons {
+  padding-top: 20px;
+}
+
+.pricetext {
+  color: #ea515c;
+  font-size: x-large;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.greycolor {
+  color: #858788 !important;
+}
+
+.header-rating {
+  padding: 20px 0px;
+}
+
+.header-rating .header {
+  margin-top: 2px !important;
+}
+
+.sizeblock,
+.quantityblock {
+  display: block;
+  padding: 20px 0px;
+}
+
+.product-area {
+  background-color: white;
+  padding: 20px 0px;
+}
+
+#review form {
+  padding: 20px 0px;
+}
+
+#seg {
+  background: #f3f4f5;
+}
+/*# sourceMappingURL=App.css.map */
