@@ -171,6 +171,10 @@ footer {
   padding: 20px 0px;
 }
 
+#footer2 .header {
+  color: white !important;
+}
+
 //categories page
 .hero-image2 {
   background-image: url("/Images/Images-modal4.png") !important;
@@ -272,4 +276,10 @@ footer {
 
 #seg {
   background: #f3f4f5;
+}
+
+a.item.purple-text {
+  &:hover {
+    background-color: white !important;
+  }
 }

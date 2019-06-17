@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, List, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 
 
 class Footer2 extends React.Component {
@@ -20,36 +22,36 @@ class Footer2 extends React.Component {
                         <button className="purple-button">Subscribe</button>
                     </div>
                 </Grid.Row>
-                <Grid.Row>
+                <Grid.Row color="black">
                     <List horizontal className="center aligned very relaxed" id="footer2">
                         <List.Item>
                             <List.Content>
-                                <List.Header>Women</List.Header>
+                                <List.Header as={Link} to="/men">Women</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Men</List.Header>
+                                <List.Header as={Link} to="/men">Men</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Kids</List.Header>
+                                <List.Header as={Link} to="/men">Kids</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Shoes</List.Header>
+                                <List.Header as={Link} to="/men">Shoes</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Brands</List.Header>
+                                <List.Header as={Link} to="/men">Brands</List.Header>
                             </List.Content>
                         </List.Item>
                     </List>
                 </Grid.Row>
-                <Grid.Row centered >
+                <Grid.Row centered color="black" >
                     <div>
                         <Button circular color='facebook' icon='facebook' />
                         <Button circular color='twitter' icon='twitter' />

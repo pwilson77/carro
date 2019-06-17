@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image, Header, Segment, List, Card } from 'semantic-ui-react';
+import { Grid, Header, List, Card } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 
 class MenBody extends React.Component {
@@ -51,42 +52,42 @@ class MenBody extends React.Component {
                         <Grid.Column width={12}>
                             <Card.Group itemsPerRow={3}>
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt12.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt8.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt11.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt14.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt3.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt5.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
@@ -99,21 +100,21 @@ class MenBody extends React.Component {
                         <Grid.Column width={16}>
                             <Card.Group itemsPerRow={3}>
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt12.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt12.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'
                                     description='View Cat'
                                 />
                                 <Card
-                                    href='#card-example-link-card'
+                                    href='/product'
                                     image={require('../assets/Images/images-shirt12.png')}
                                     header='Matt Giampietro'
                                     meta='Friend'

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, List, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 
 class Footer3 extends React.Component {
     state = {}
@@ -7,30 +9,30 @@ class Footer3 extends React.Component {
         return (
             <React.Fragment>
                 <Grid.Row>
-                    <List horizontal className="center aligned very relaxed" id="footer2">
+                    <List horizontal className="center aligned very relaxed">
                         <List.Item>
                             <List.Content>
-                                <List.Header>Women</List.Header>
+                                <List.Header as={Link} to="/men">Women</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Men</List.Header>
+                                <List.Header as={Link} to="/men">Men</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Kids</List.Header>
+                                <List.Header as={Link} to="/men">Kids</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Shoes</List.Header>
+                                <List.Header as={Link} to="/men">Shoes</List.Header>
                             </List.Content>
                         </List.Item>
                         <List.Item>
                             <List.Content>
-                                <List.Header>Brands</List.Header>
+                                <List.Header as={Link} to="/men">Brands</List.Header>
                             </List.Content>
                         </List.Item>
                     </List>

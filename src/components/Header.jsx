@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Image, Input, Menu, Icon, Label, MenuItem } from 'semantic-ui-react';
-
+import { Grid, Input, Menu, Icon, Label } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 class Header extends React.Component {
   state = { activeItem: 'Women' }
 
@@ -14,17 +14,17 @@ class Header extends React.Component {
         <Grid.Column width={3}>
           <Menu secondary>
 
-            <Menu.Item name="SHOPMATE" className="purple-text" />
+            <Menu.Item name="SHOPMATE" className="purple-text" as={Link} to="/" />
 
           </Menu>
         </Grid.Column>
         <Grid.Column width={13}>
           <Menu secondary>
-            <Menu.Item name='Women' active={activeItem === 'Women'} onClick={this.handleItemClick} />
-            <Menu.Item name='Men' active={activeItem === 'Men'} onClick={this.handleItemClick} />
-            <Menu.Item name='Kids' active={activeItem === 'Kids'} onClick={this.handleItemClick} />
-            <Menu.Item name='Shoes' active={activeItem === 'Shoes'} onClick={this.handleItemClick} />
-            <Menu.Item name='Brands' active={activeItem === 'Brands'} onClick={this.handleItemClick} />
+            <Menu.Item name='Women' active={activeItem === 'Women'} onClick={this.handleItemClick} as={Link} to="/men" />
+            <Menu.Item name='Men' active={activeItem === 'Men'} onClick={this.handleItemClick} as={Link} to="/men" />
+            <Menu.Item name='Kids' active={activeItem === 'Kids'} onClick={this.handleItemClick} as={Link} to="/men" />
+            <Menu.Item name='Shoes' active={activeItem === 'Shoes'} onClick={this.handleItemClick} as={Link} to="/men" />
+            <Menu.Item name='Brands' active={activeItem === 'Brands'} onClick={this.handleItemClick} as={Link} to="/men" />
 
             <Menu.Menu position='right'>
               <Menu.Item>
