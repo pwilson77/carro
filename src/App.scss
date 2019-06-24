@@ -7,7 +7,9 @@ $special-gray: #858788;
 .navbar {
   margin-top: 0px !important;
 }
-
+.flex {
+  display: flex;
+}
 #flex-center {
   display: flex;
   align-content: center;
@@ -282,4 +284,23 @@ a.item.purple-text {
   &:hover {
     background-color: white !important;
   }
+}
+
+/*bordeless*/
+.borderless {
+  border-top-color: transparent !important;
+}
+
+.popup-menu {
+  width: 650px !important;
+}
+
+.filtercon {
+  padding-top: 20px;
+}
+
+.input-range__slider,
+.input-range__track--active {
+  background: $special-purple !important;
+  border-color: $special-purple;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import Header from '../components/Header';
+import Nav from '../components/Nav';
 import MenBody from '../components/MenBody';
 import Footer2 from '../components/Footer2';
 
@@ -12,8 +12,7 @@ function Product() {
         <React.Fragment>
             <div className="container">
                 <Grid centered padded>
-                    <Header />
-
+                    <Nav />
                     <div className="fifteen wide column ui secondary basic segment">
                         <MenBody />
                     </div>

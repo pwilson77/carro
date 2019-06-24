@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import Header from '../components/Header';
+import Nav from '../components/Nav';
 import HomeBody from '../components/HomeBody';
 
 
@@ -9,7 +9,7 @@ function Home() {
         <React.Fragment>
             <div className="container">
                 <Grid centered padded>
-                    <Header />
+                    <Nav />
                     <HomeBody />
                 </Grid>
             </div>

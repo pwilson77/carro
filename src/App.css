@@ -3,6 +3,12 @@
   margin-top: 0px !important;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,5 +342,24 @@ footer {
 
 a.item.purple-text:hover {
   background-color: white !important;
+}
+
+/*bordeless*/
+.borderless {
+  border-top-color: transparent !important;
+}
+
+.popup-menu {
+  width: 650px !important;
+}
+
+.filtercon {
+  padding-top: 20px;
+}
+
+.input-range__slider,
+.input-range__track--active {
+  background: #ea515c !important;
+  border-color: #ea515c;
 }
 /*# sourceMappingURL=App.css.map */

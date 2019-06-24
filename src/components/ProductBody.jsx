@@ -64,7 +64,7 @@ class ProductBody extends React.Component {
                                 </Button>
                             </Button.Group>
                         </div>
-                        <button className="purple-button">
+                        <button className="purple-button" >
                             Add to cart
                         </button>
                         <button className="purple-text-button">

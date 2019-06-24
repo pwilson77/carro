@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import Header from '../components/Header';
+import Nav from '../components/Nav';
 import ProductBody from '../components/ProductBody';
 import Footer3 from '../components/Footer3';
 
@@ -11,7 +11,7 @@ function Product() {
             <div className="container">
 
                 <Grid centered padded>
-                    <Header />
+                    <Nav />
 
                     <div className="ui grid centered padded" id="seg">
                         <ProductBody />
