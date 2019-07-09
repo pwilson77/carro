@@ -6,27 +6,6 @@ import Product from './pages/Product';
 import Men from './pages/Men';
 import './App.css';
 
-const MyContext = React.createContext();
-
-class MyProvider extends Component {
-  state = { products: [], filteredProducts: [] }
-
-  componentWillMount() {
-    fetch("http://localhost:8000/products").then(res => res.json()).then(data => this.setState({
-      products: data,
-      filteredProducts: data
-    }));
-  }
-
-
-  render() {
-    return (
-      <MyContext.Provider value={{ state: this.state }}>
-        {this.props.children}
-      </MyContext.Provider>
-    );
-  }
-}
 
 function App() {
 

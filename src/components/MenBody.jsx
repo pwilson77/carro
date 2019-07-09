@@ -13,7 +13,7 @@ class MenBody extends React.Component {
             value4: {
                 min: 5,
                 max: 10,
-            }, selectedItem: 0
+            }
         };
 
         this.handleCheckBoxChange = this.handleCheckboxChange.bind(this);
