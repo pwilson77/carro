@@ -17,12 +17,16 @@ class ProductBody extends React.Component {
             'brown',
             'grey',
             'black',
-        ]
+        ],
+
+
     }
 
 
     render() {
         const { colors } = this.state;
+        const { currentProduct } = this.props;
+
         return (
             <React.Fragment>
                 <Grid.Row>
@@ -64,7 +68,7 @@ class ProductBody extends React.Component {
                                 </Button>
                             </Button.Group>
                         </div>
-                        <button className="purple-button" >
+                        <button className="purple-button" onClick={(e) => this.props.handleAddToCart(e, currentProduct)} >
                             Add to cart
                         </button>
                         <button className="purple-text-button">

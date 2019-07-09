@@ -3,7 +3,6 @@ import { Grid, Header, List, Card } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ProductList from './ProductList';
 import Filter from './Filter';
-import { thisExpression } from '@babel/types';
 
 
 class MenBody extends React.Component {
@@ -14,7 +13,7 @@ class MenBody extends React.Component {
             value4: {
                 min: 5,
                 max: 10,
-            },
+            }, selectedItem: 0
         };
 
         this.handleCheckBoxChange = this.handleCheckboxChange.bind(this);
@@ -134,7 +133,7 @@ class MenBody extends React.Component {
 
                         </Grid.Column>
                         <Grid.Column width={12}>
-                            <ProductList products={this.state.filteredProducts} handleAddToCart={this.handleAddToCart} />
+                            <ProductList products={this.state.filteredProducts} selectedItem={this.state.selectedItem} />
 
                         </Grid.Column>
                     </Grid.Row>

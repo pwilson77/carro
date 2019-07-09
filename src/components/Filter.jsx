@@ -10,12 +10,7 @@ class Filter extends React.Component {
         value: this.props.brand
     }
 
-
-
-
     render() {
-
-
         const colors = [
             'red',
             'orange',
@@ -31,7 +26,6 @@ class Filter extends React.Component {
             'grey',
             'black',
         ];
-
 
         return (
             <Card>
@@ -80,21 +74,17 @@ class Filter extends React.Component {
                         <div className="filtercon">
                             <Form.Field>
                                 <Checkbox
-
                                     label='Sphynx'
                                     name='checkboxRadioGroup'
                                     value='Sphynx'
                                     onChange={this.props.handleCheckboxChange}
-
                                 />
                             </Form.Field>
                             <Form.Field>
                                 <Checkbox
-
                                     label='DGK'
                                     name='checkboxRadioGroup'
                                     value='DGK'
-
                                     onChange={this.props.handleCheckboxChange}
                                 />
                             </Form.Field>

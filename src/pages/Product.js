@@ -4,27 +4,67 @@ import Nav from '../components/Nav';
 import ProductBody from '../components/ProductBody';
 import Footer3 from '../components/Footer3';
 
+class Product extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cartItems: [], current_product_id: 0
+        }
 
-function Product() {
-    return (
-        <React.Fragment>
-            <div className="container">
+        this.handleAddItemToCart = this.handleAddItemToCart.bind(this);
+        this.handleRemoveItemFromCart = this.handleRemoveItemFromCart.bind(this);
+    }
 
-                <Grid centered padded>
-                    <Nav />
+    handleAddToCart = (e, product) => {
+        this.setState(state => {
+            const cartItems = state.cartItems;
+            let productAlreadyInCart = false;
 
-                    <div className="ui grid centered padded" id="seg">
-                        <ProductBody />
+            cartItems.forEach(cp => {
+                if (cp.id === product.id) {
+                    cp.count += 1;
+                    productAlreadyInCart = true;
+                }
+            });
 
-                    </div>
+            if (!productAlreadyInCart) {
+                cartItems.push({ ...product, count: 1 });
+            }
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            return { cartItems: cartItems };
+        });
+    }
 
-                    <Footer3 />
+    handleRemoveFromCart = (e, product) => {
+        this.setState(state => {
+            const cartItems = state.cartItems.filter(a => a.id !== product.id);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            return { cartItems: cartItems };
+        })
+    }
 
-                </Grid>
+    render() {
+        return (
+            <React.Fragment>
+                <div className="container">
 
-            </div>
-        </React.Fragment>
-    );
+                    <Grid centered padded>
+                        <Nav />
+
+                        <div className="ui grid centered padded" id="seg">
+                            <ProductBody handleAddItemToCart={this.handleAddItemToCart} handleRemoveItemFromCart={this.handleRemoveItemFromCart} currentProduct={this.state.current_product_id} />
+
+                        </div>
+
+                        <Footer3 />
+
+                    </Grid>
+
+                </div>
+            </React.Fragment>
+        );
+    }
 }
 
 export default Product;
+

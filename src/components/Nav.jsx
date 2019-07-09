@@ -1,59 +1,19 @@
 import React from "react";
-import { Grid, Input, Menu, Icon, Label, Popup, Button, Table, Image, Header } from 'semantic-ui-react';
+import { Grid, Input, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 class Nav extends React.Component {
-  state = { activeItem: 'Women' }
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: 'Women'
+    }
+  }
+
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const popup = () => (
-      <React.Fragment>
-        <Header as="h1">4 items in my cart</Header>
-
-        <Table collapsing className="popup-menu">
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell width={9}>Item</Table.HeaderCell>
-              <Table.HeaderCell width={2}>Size</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Quantity</Table.HeaderCell>
-              <Table.HeaderCell width={2}>Price</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            <Table.Row>
-              <Table.Cell className="flex">
-
-                <Image src="/Images/images-shirt1.png" />
-                <div>
-                  <p>Green shirt</p>
-                  <p>Men</p>
-                  <Button icon="red cancel" circular basic />
-                </div>
-
-              </Table.Cell>
-              <Table.Cell>
-                <Header as="h2">XXL</Header>
-              </Table.Cell>
-              <Table.Cell>
-                <Button.Group circular>
-                  <Button icon="add" />
-                  <Button basic disabled content={0} />
-                  <Button icon="minus" />
-
-                </Button.Group>
-              </Table.Cell>
-              <Table.Cell className="purple-text">
-                £12.00
-              </Table.Cell>
-            </Table.Row>
-          </Table.Body>
-        </Table>
-
-      </React.Fragment>
-    )
-
-
     const { activeItem } = this.state
 
     return (
@@ -78,18 +38,7 @@ class Nav extends React.Component {
                 <Input icon='search' placeholder='Search...' />
               </Menu.Item>
               <Menu.Item>
-                <Popup
-                  on="click"
-                  trigger={
-                    <Button basic circular>
-                      <Icon name='shopping bag' />
-                      <Label color='red' floating circular> 22 </Label>
-                    </Button>}
-                  content={popup}
-                  position="bottom right"
-
-                />
-
+                <Cart />
               </Menu.Item>
             </Menu.Menu>
           </Menu>
