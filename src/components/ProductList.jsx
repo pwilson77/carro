@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+
 class ProductList extends React.Component {
 
     render() {

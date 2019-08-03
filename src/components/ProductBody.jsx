@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Image, Header, List, Rating, Label, Button, Icon, Statistic, Form, Card, TextArea, Divider } from 'semantic-ui-react';
 
+
 class ProductBody extends React.Component {
     state = {
         colors: [

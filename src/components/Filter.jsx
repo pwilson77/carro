@@ -33,7 +33,7 @@ class Filter extends React.Component {
 
                     <Card.Header>
                         {this.props.count} products found
-                            </Card.Header>
+                    </Card.Header>
 
 
                     <Card.Meta><Icon name="cancel" size="mini" />Gender: Women</Card.Meta>
