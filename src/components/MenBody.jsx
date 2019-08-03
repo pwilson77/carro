@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Header, List, Card } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import ProductList from './ProductList';
+import ProductsIndex from './ProductsIndex';
 import Filter from './Filter';
 import { ProductContext } from './ProductContext';
 
@@ -132,7 +131,7 @@ class MenBody extends React.Component {
                             />
                         </Grid.Column>
                         <Grid.Column width={12}>
-                            <ProductList selectedItem={this.state.selectedItem} products={this.context.filteredProducts} />
+                            <ProductsIndex selectedItem={this.state.selectedItem} products={this.context.filteredProducts} />
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
@@ -169,7 +168,7 @@ class MenBody extends React.Component {
                                 <h1>Converse</h1>
                                 <p>
                                     Explore styles tough enough to handle all your workouts
-                                    </p>
+                                </p>
                                 <button className="purple-text-button">shop</button>
                             </div>
                         </div>

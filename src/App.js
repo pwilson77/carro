@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Men from './pages/Men';
@@ -13,13 +13,11 @@ function App() {
   return (
     <React.Fragment>
       <ProductProvider>
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/men" exact component={Men} />
-            <Route path="/product" exact component={Product} />
-          </Switch>
-        </Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/men" exact component={Men} />
+          <Route path="/products" component={Product} />
+        </Switch>
       </ProductProvider>
     </React.Fragment>
   );

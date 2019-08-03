@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-class ProductList extends React.Component {
+
+
+class ProductIndex extends React.Component {
 
     render() {
 
@@ -13,10 +15,9 @@ class ProductList extends React.Component {
                 <Image src={`/products/${product.sku}_1.jpg`} />
                 <Card.Content textAlign="center" className="borderless">
                     <Card.Header>{product.description}</Card.Header>
-                    <Link to={`/product/${product.id}`}>
+                    <Link to={`/products/${product.id}`}>
                         <button className="purple-button2"> View Product </button>
                     </Link>
-                    <Route path="/:name/:id" component={product} />
                 </Card.Content>
             </Card>
         )
@@ -33,4 +34,4 @@ class ProductList extends React.Component {
     }
 }
 
-export default ProductList;
+export default ProductIndex;
