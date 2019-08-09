@@ -134,6 +134,11 @@
           transition-duration: 1s;
 }
 
+.active_color,
+.active_size {
+  border: 2.5px solid #0c2e69 !important;
+}
+
 .list-i {
   padding: 0px 8px 16px 8px;
 }

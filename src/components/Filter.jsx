@@ -66,10 +66,7 @@ class Filter extends React.Component {
                                 formatLabel={value => `$ ${value}`}
                                 value={this.props.start}
                                 onChange={value => this.props.handlePrice(value)}
-                            //onChangeComplete={value => console.log(value)} 
                             />
-
-
                         </div>
                         <div className="filtercon">
                             <Form.Field>

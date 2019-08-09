@@ -5,7 +5,8 @@ import { Icon, Label, Popup, Button, Header, Table, Image } from 'semantic-ui-re
 class Cart extends Component {
 
     render() {
-        const { cartItems } = this.props;
+        const cartItems = localStorage.getItem('cartItems');
+        console.log(cartItems);
 
         const popup = () => (
             <React.Fragment>

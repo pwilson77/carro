@@ -9,44 +9,33 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            colors: [
-                'red',
-                'orange',
-                'yellow',
-                'olive',
-                'green',
-                'teal',
-                'blue',
-                'violet',
-                'purple',
-                'pink',
-                'brown',
-                'grey',
-                'black',
-            ], size: [], quantity: 0, totalPrice: 0
+            color_selected: '', active_color: 0, size_selected: '', active_size: 0, quantity: 0
         }
 
-        //  this.handleAddItemToCart = this.handleAddItemToCart.bind(this);
-        //  this.handleRemoveItemFromCart = this.handleRemoveItemFromCart.bind(this);
+        this.setSize = this.setSize.bind(this);
+        this.setColor = this.setColor.bind(this);
     }
 
     handleAddToCart = (e, product) => {
         this.setState(state => {
-            const cartItems = state.cartItems;
+            let cartItems = [];
             let productAlreadyInCart = false;
 
-            cartItems.forEach(cp => {
-                if (cp.id === product.id) {
-                    cp.count += 1;
-                    productAlreadyInCart = true;
-                }
-            });
+
+            if (JSON.parse(localStorage.getItem('cartItems')) != null) {
+                cartItems = JSON.parse(localStorage.getItem('cartItems'))
+                cartItems.forEach(cp => {
+                    if (cp.id === product.id) {
+                        productAlreadyInCart = true;
+                        return alert('Product is already in the cart');
+                    }
+                });
+            }
 
             if (!productAlreadyInCart) {
-                cartItems.push({ ...product, count: 1 });
+                cartItems.push({ ...product, count: state.quantity, size_selected: state.size_selected, color_selected: state.color_selected });
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
             }
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            return { cartItems: cartItems };
         });
     }
 
@@ -58,22 +47,48 @@ class ProductShow extends React.Component {
         })
     }
 
+    setSize = (i, e) => {
+        this.setState(
+            { size_selected: e.target.value, active_size: i }
+        )
+    }
 
+    setColor = (i, e) => {
+        this.setState(
+            { color_selected: e.target.getAttribute('value'), active_color: i }
+        )
+    }
 
+    addToQuantity = () => {
+        this.setState({
+            quantity: this.state.quantity + 1
+        })
+    }
+
+    subtractFromQuantity = () => {
+        this.setState({
+            quantity: this.state.quantity - 1
+        })
+    }
 
 
     render() {
-        const { colors } = this.state;
-        const { currentProduct } = this.props;
-        let productView, availableSizes;
+        const currentProduct = this.props.product;
+        let productView, availableSizes, colors;
 
-        console.log(this.props.product);
 
 
         if (this.props.product) {
-            availableSizes = this.props.product.availableSizes.map(size => (
-                <Button size='mini' content={size} />
+            availableSizes = this.props.product.availableSizes.map((size, i) => (
+                <Button size='mini' value={size} content={size}
+                    onClick={this.setSize.bind(this, i + 1)} key={i + 1}
+                    className={this.state.active_size === i + 1 ? 'active_size' : null} />
             ));
+
+            colors = this.props.product.colors.map((color, i) =>
+                <Label circular color={color} empty key={i + 1} as="a" value={color}
+                    onClick={this.setColor.bind(this, i + 1)}
+                    className={this.state.active_color === i + 1 ? 'active_color' : null} />)
 
             productView = (
                 <Grid.Row>
@@ -91,7 +106,11 @@ class ProductShow extends React.Component {
                         <div className="pricetext">
                             £{`${this.props.product.price}`}
                         </div>
-                        <div>{colors.map(color => <Label circular color={color} empty key={color} />)}</div>
+                        <div>
+                            <p className="block greycolor">Color</p>
+
+                            {colors}
+                        </div>
                         <div className="sizeblock">
                             <p className="block greycolor">Size</p>
                             {availableSizes}
@@ -100,16 +119,16 @@ class ProductShow extends React.Component {
                             <p className="block greycolor">Quantity</p>
 
                             <Button.Group size="large">
-                                <Button>
+                                <Button onClick={(e) => this.addToQuantity(e)}>
                                     <Icon name='add' />
                                 </Button>
-                                <Button.Or text="2" />
-                                <Button>
+                                <Button.Or text={`${this.state.quantity}`} />
+                                <Button onClick={(e) => this.subtractFromQuantity(e)}>
                                     <Icon name='minus' />
                                 </Button>
                             </Button.Group>
                         </div>
-                        <button className="purple-button" onClick={(e) => this.props.handleAddToCart(e, currentProduct)} >
+                        <button className="purple-button" onClick={(e) => this.handleAddToCart(e, currentProduct)} >
                             Add to cart
                 </button>
                         <button className="purple-text-button">
@@ -117,6 +136,7 @@ class ProductShow extends React.Component {
                 </button>
                     </Grid.Column>
                 </Grid.Row>)
+
         } else {
             productView = <h1>Product is Loading</h1>
         }
@@ -154,10 +174,10 @@ class ProductShow extends React.Component {
                                     </p>
                                     <Label.Group circular>
                                         <Label as="a">
-                                            <Icon name="heart outline red" /> 22
+                                            <Icon className="heart outline red" /> 22
                                         </Label>
                                         <Label as="a">
-                                            <Icon name="comments outline icon" /> 22
+                                            <Icon className="comments outline icon" /> 22
                                     </Label>
                                     </Label.Group>
                                 </Grid.Column>
