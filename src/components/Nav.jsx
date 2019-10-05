@@ -20,9 +20,7 @@ class Nav extends React.Component {
       <Grid.Row>
         <Grid.Column width={3}>
           <Menu secondary>
-
             <Menu.Item name="SHOPMATE" className="purple-text" as={Link} to="/" />
-
           </Menu>
         </Grid.Column>
         <Grid.Column width={13}>

@@ -4,14 +4,53 @@ import { Icon, Label, Popup, Button, Header, Table, Image } from 'semantic-ui-re
 
 class Cart extends Component {
 
+    componentDidMount = {
+
+    }
+
     render() {
-        const cartItems = localStorage.getItem('cartItems');
-        console.log(cartItems);
+        let label, cartRow;
+        const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        //console.log(cartItems);
+
+        if (cartItems != null) {
+            label = <Label color='red' floating circular> {cartItems.length} </Label>
+            cartRow = cartItems.map((product) => (
+                <Table.Row>
+                    <Table.Cell className="flex">
+                        <Image src="/Images/images-shirt1.png" />
+                        <div>
+                            <p>{product.title}</p>
+                            <p>Men</p>
+                            <Button icon="red cancel" circular basic />
+                        </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                        <Header as="h2">{product.size_selected}</Header>
+                    </Table.Cell>
+                    <Table.Cell>
+                        <Button.Group circular>
+                            <Button icon="add" />
+                            <Button basic disabled content={0} />
+                            <Button icon="minus" />
+
+                        </Button.Group>
+                    </Table.Cell>
+                    <Table.Cell className="purple-text">
+                        £{product.price}
+                    </Table.Cell>
+                </Table.Row>
+            ))
+        } else {
+            label = null;
+            cartRow = null;
+        }
+
+
 
         const popup = () => (
             <React.Fragment>
-                {cartItems.length === 0 ? <Header as="h1">There are no Items in the Cart</Header> : <Header as="h1"> {cartItems.length} items in my cart</Header>}
-
+                {cartItems === null ? <Header as="h1">There are no Items in the Cart</Header> : <Header as="h1"> {cartItems.length} items in my cart</Header>}
 
                 <Table collapsing className="popup-menu">
                     <Table.Header>
@@ -23,32 +62,7 @@ class Cart extends Component {
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>
-                        <Table.Row>
-                            <Table.Cell className="flex">
-
-                                <Image src="/Images/images-shirt1.png" />
-                                <div>
-                                    <p>Green shirt</p>
-                                    <p>Men</p>
-                                    <Button icon="red cancel" circular basic />
-                                </div>
-
-                            </Table.Cell>
-                            <Table.Cell>
-                                <Header as="h2">XXL</Header>
-                            </Table.Cell>
-                            <Table.Cell>
-                                <Button.Group circular>
-                                    <Button icon="add" />
-                                    <Button basic disabled content={0} />
-                                    <Button icon="minus" />
-
-                                </Button.Group>
-                            </Table.Cell>
-                            <Table.Cell className="purple-text">
-                                £12.00
-                    </Table.Cell>
-                        </Table.Row>
+                        {cartRow}
                     </Table.Body>
                 </Table>
 
@@ -61,7 +75,7 @@ class Cart extends Component {
             trigger={
                 <Button basic circular>
                     <Icon name='shopping bag' />
-                    <Label color='red' floating circular> 22 </Label>
+                    {label}
                 </Button>}
             content={popup}
             position="bottom right"

@@ -135,8 +135,7 @@ class ProductShow extends React.Component {
                             <i className="heart outline red icon"></i> Add to wish list
                 </button>
                     </Grid.Column>
-                </Grid.Row>)
-
+                </Grid.Row>);
         } else {
             productView = <h1>Product is Loading</h1>
         }
